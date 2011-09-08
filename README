@@ -1,4 +1,4 @@
-rb_spread 2.0rc1: A Ruby Spread Interface
+rb_spread 2.0rc2: A Ruby Spread Interface
 
 DESCRIPTION
 -----------
@@ -18,7 +18,7 @@ more object-oriented or closer to idiomatic Ruby).
 PREREQUISITES
 -------------
 This extension requires Spread >= 3.12 daemon and C libraries (with
-headers), and Ruby >= 1.8
+headers), and Ruby >= 1.9
 
 INSTALLATION
 -----------
@@ -44,11 +44,13 @@ API is not compatible with rb_spread 1.0. rb_spread 2 also includes
 patches from:
 
     Gavin Sherry
+    Duane Johnson (update for Ruby 1.9.1)
 
 LICENSE
 -------
 Copyright (2001) George Schlossnagle
 Copyright (2005) Neil Conway
+Copyright (2011) Duane Johnson
 
 This software is released under the Perl Artistic License and is free
 to use for any purpose.
