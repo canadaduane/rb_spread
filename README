@@ -1,0 +1,70 @@
+rb_spread 2.0rc1: A Ruby Spread Interface
+
+DESCRIPTION
+-----------
+This extension provides a set of Ruby bindings for the client API
+provided by the Spread Group Communication System. Spread is available
+at http://www.spread.org/.  Spread is a local/wide area group
+communication toolkit that runs on most modern operating systems.  It
+allows convenient mechanisms for reliable multicasting information
+between applications as well as providing a number of levels of
+message assurance.
+
+rb_spread provides bindings for almost all of the Spread client
+API. It is reasonably similar to the Spread C API, only differing
+where I felt there was a good reason to do so (e.g. to make the API
+more object-oriented or closer to idiomatic Ruby).
+
+PREREQUISITES
+-------------
+This extension requires Spread >= 3.12 daemon and C libraries (with
+headers), and Ruby >= 1.8
+
+INSTALLATION
+-----------
+1. ruby extconf.rb
+2. make
+3. make install
+
+If you have installed Spread in an unusual prefix, specify Spread's
+installation prefix via the --with-spread-dir=... option to extconf.rb
+
+"make rdoc" generates HTML API documentation. "make check" runs some
+unit tests (you will need to have a Spread daemon running on localhost
+for these to succeed; if any unit tests fail, please let me know).
+flooder.rb and user.rb are two simple example programs that use the
+rb_spread API.
+
+AUTHOR
+------
+rb_spread 1.0 was originally written by George Schlossnagle. rb_spread
+2.0 is derived from rb_spread 1.0, and is maintained by Neil Conway
+(neilc at samurai.com). Most of the code has been rewritten, and the
+API is not compatible with rb_spread 1.0. rb_spread 2 also includes
+patches from:
+
+    Gavin Sherry
+
+LICENSE
+-------
+Copyright (2001) George Schlossnagle
+Copyright (2005) Neil Conway
+
+This software is released under the Perl Artistic License and is free
+to use for any purpose.
+
+This product uses software developed by Spread Concepts LLC for use in
+the Spread toolkit. For more information about Spread see
+http://www.spread.org
+
+TODO
+------
+- fix thread-safety unit test, or debug why it is failing
+- more unit tests
+- finish rdoc
+- cleanup examples, add more of them
+- add timeouts on connect (?)
+- endian handling (?)
+- support for scatter / gather IO (?)
+- make some properties (self discard, service type) be settable
+  per-connection as default values (?)
